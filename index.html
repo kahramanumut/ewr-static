@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Word Reminder App - Modern Developer Page</title>
+  <!-- Google Fonts for modern typography -->
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+  />
+  <style>
+    /* Reset some default browser styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .navbar .logo {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #f97316;
+      text-decoration: none;
+    }
+
+    .navbar nav a {
+      margin-left: 2rem;
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .navbar nav a:hover {
+      color: #f97316;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #f97316, #ff5c00);
+      color: #fff;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
+    }
+
+    .hero .cta-btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #fff;
+      color: #f97316;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .hero .cta-btn:hover {
+      background-color: #ffe0cc;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    /* About Section */
+    .about-section {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .about-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #f97316;
+    }
+    .about-section p {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* Features Section */
+    .features-section {
+      margin-bottom: 3rem;
+    }
+    .features-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      color: #f97316;
+      text-align: center;
+    }
+    .feature-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .feature-card {
+      background-color: #fff;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .feature-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .feature-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+    .feature-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* Screenshots Section */
+    .screenshots-section {
+      margin-bottom: 3rem;
+    }
+    .screenshots-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      color: #f97316;
+      text-align: center;
+    }
+    .screenshots-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .screenshots-container img {
+      width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Store Links Section */
+    .store-links {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .store-links a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #f97316;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+    .store-links a:hover {
+      background-color: #ff8c42;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      color: #666;
+      border-top: 1px solid #eee;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="#" class="logo">English Word Reminder</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+      <a href="#screenshots">Screenshots</a>
+      <a href="#download">Download</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>English Word Reminder App</h1>
+    <p>Boost Your English Vocabulary with Daily Reminders, Personalized Word Lists, and Interactive Quizzes.</p>
+    <a href="#features" class="cta-btn">Learn More</a>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="container about-section" id="about">
+    <h2>About the App</h2>
+    <p>
+      <strong>English Word Reminder App</strong> is designed for English learners looking to expand their vocabulary
+      through daily notifications and fun exercises. Whether you are a beginner or an advanced learner,
+      our app personalizes your learning experience with tailored word lists and quizzes.
+    </p>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section class="container features-section" id="features">
+    <h2>Features</h2>
+    <div class="feature-cards">
+      <div class="feature-card">
+        <h3>Daily Reminders</h3>
+        <p>Receive notifications at selected times to learn new words each day.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Personalized Word Lists</h3>
+        <p>Create, manage, and customize your word lists based on your level or interests.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Interactive Quizzes</h3>
+        <p>Practice what you learn with multiple-choice, fill-in-the-blank, and more.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Progress Tracking</h3>
+        <p>Monitor your learning and stay motivated by unlocking achievements over time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREENSHOTS SECTION -->
+  <!-- <section class="container screenshots-section" id="screenshots">
+    <h2>Screenshots</h2>
+    <div class="screenshots-container">
+       Replace with actual screenshots
+      <img src="screenshot1.png" alt="Screenshot 1">
+      <img src="screenshot2.png" alt="Screenshot 2">
+    </div>
+  </section> -->
+
+  <!-- DOWNLOAD / STORE LINKS SECTION -->
+  <section class="store-links" id="download">
+    <a href="https://apps.apple.com/us/app/english-word-reminder/id6740508530" target="_blank">Download on the App Store</a>
+    <a href="#" target="_blank">Get it on Google Play</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 English Word Reminder App. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
